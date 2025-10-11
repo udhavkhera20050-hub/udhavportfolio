@@ -24,7 +24,7 @@ body {
 
 header {
     margin-top: 20px;
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
@@ -134,9 +134,12 @@ nav a.active {
     nav a.active {
         padding: 1rem;
         border-radius: 0.5rem;
-        border-bottom: 0.5rem solid #b74b4b;
+        /* border-bottom: 0.5rem solid #b74b4b; */
     }
 }
+
+
+
 
 
 
@@ -309,6 +312,13 @@ span {
 
 
 
+footer {
+  background-color: #111;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 19px;
+}
 
 
 
@@ -578,3 +588,4 @@ span {
   box-shadow: 0 0 20px #0ff, 0 0 40px #0ff, 0 0 60px #0ff;
   color: #0ff;
 }
+

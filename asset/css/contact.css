@@ -1,122 +1,253 @@
-/* Reset */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
 }
 
 body {
-  font-family: 'Inter', sans-serif;
-  background-color: #000000;
-  color: #e6eef6;
+  background-color: black;
+  color: white;
   line-height: 1.6;
 }
 
-/* Section */
+/* Header (Same as index) */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 9%;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.3rem;
+  color: #b74b4b;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  font-size: 2.5rem;
+  color: white;
+}
+
+nav a {
+  font-size: 1.6rem;
+  color: white;
+  margin-left: 4rem;
+  font-weight: 500;
+  border-bottom: 3px solid transparent;
+  transition: 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  color: #b74b4b;
+  border-bottom: 3px solid #b74b4b;
+}
+
+/* Responsive Navbar */
+@media (max-width: 995px) {
+  .hamburger {
+    display: block;
+  }
+
+  nav {
+    position: absolute;
+    display: none;
+    top: 5rem;
+    right: 0;
+    width: 40%;
+    border-left: 3px solid #b74b4b;
+    border-bottom: 3px solid #b74b4b;
+    border-bottom-left-radius: 2rem;
+    background-color: #161616;
+    padding: 1rem;
+  }
+
+  nav.active {
+    display: block;
+  }
+
+  nav a {
+    display: block;
+    margin: 2rem 0;
+  }
+
+  nav a:hover,
+  nav a.active {
+    border-bottom: none;
+    background-color: #b74b4b;
+    color: black;
+    border-radius: 8px;
+    padding: 0.8rem;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+}
+
+body {
+  background-color: black;
+  color: white;
+  line-height: 1.5;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 9%;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.6rem;
+  color: #b74b4b;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  font-size: 2.5rem;
+  color: white;
+}
+
 .contact-section {
   padding: 60px 20px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
+nav a {
+  font-size: 1.3rem;
+  color: white;
+  margin-left: 3rem;
+  font-weight: 500;
+  border-bottom: 3px solid transparent;
+  transition: 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  color: #b74b4b;
+  border-bottom: 3px solid #b74b4b;
+}
+
+/* Responsive Navbar */
+@media (max-width: 995px) {
+  .hamburger {
+    display: block;
+  }
+
+  nav {
+    position: absolute;
+    display: none;
+    top: 5rem;
+    right: 0;
+    width: 60%;
+    border-left: 3px solid #b74b4b;
+    border-bottom: 3px solid #b74b4b;
+    border-bottom-left-radius: 2rem;
+    background-color: #161616;
+    padding: 1rem;
+  }
+
+  nav.active {
+    display: block;
+  }
+
+  nav a {
+    display: block;
+    margin: 2rem 0;
+  }
+
+  nav a:hover,
+  nav a.active {
+    border-bottom: none;
+    background-color: #b74b4b;
+    color: black;
+    border-radius: 8px;
+    padding: 0.8rem;
+  }
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 9rem 9% 5rem;
+  min-height: 100vh;
+}
+
 .contact-title {
-  font-size: 36px;
+  font-size: 1.7rem;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
 }
 
-.contact-subtitle {
-  font-size: 16px;
-  color: #9aa4b2;
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-/* Grid Layout */
 .contact-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 30px;
+  display: flex;
+  justify-content: flex-start;
 }
 
-/* Form Card */
-.contact-form-card {
+.contact-info-card {
   background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 16px;
+  border-radius: 18px;
   padding: 30px;
+  width: 800px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.contact-form-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 24px rgba(2, 6, 23, 0.6);
-}
-
-/* Form */
-.contact-form .form-group {
-  margin-bottom: 20px;
-}
-
-.contact-form label {
-  display: block;
-  margin-bottom: 6px;
-  color: #7c5cff;
-  font-weight: 600;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 12px;
-  border: none;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.1);
-  color: #e6eef6;
-  font-size: 16px;
-  outline: none;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid #7c5cff;
-}
-
-.contact-btn {
-  display: inline-block;
-  width: 100%;
-  background: #7c5cff;
-  color: #fff;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.contact-btn:hover {
-  background: #5d44e0;
-}
-
-/* Info Card */
-.contact-info-card {
-  background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 16px;
-  padding: 30px;
+.contact-info-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 18px rgba(183, 75, 75, 0.5);
 }
 
 .contact-info-card h3 {
-  font-size: 24px;
-  color: #7c5cff;
-  margin-bottom: 10px;
+  font-size: 1.8rem;
+  color: #b74b4b;
+  margin-bottom: 8px;
 }
 
 .contact-info-card p {
-  margin-bottom: 20px;
-  color: #9aa4b2;
+  font-size: 1rem;
+  margin-bottom: 8px;
 }
 
 .contact-info {
@@ -125,20 +256,30 @@ body {
 }
 
 .contact-info li {
-  margin-bottom: 10px;
-  font-size: 16px;
+  margin-bottom: 12px;
+  font-size: 1rem;
 }
 
-/* Social Links */
 .social-links a {
   display: inline-block;
-  margin-right: 12px;
-  color: #7c5cff;
-  text-decoration: none;
-  font-weight: 600;
+  margin-right: 15px;
+  color: #b74b4b;
+  font-size: 1.8rem;
   transition: color 0.3s ease;
 }
 
 .social-links a:hover {
-  color: #b6a5ff;
+  color: white;
+}
+
+/* Footer */
+footer {
+  background-color: #111;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 1rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }

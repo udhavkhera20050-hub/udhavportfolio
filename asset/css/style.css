@@ -11,7 +11,7 @@
 }
 
 html {
-    font-size: 62.5%;
+    font-size: 55.5%;
 }
 
 body {
@@ -54,7 +54,7 @@ header {
 
 
 .logo {
-    font-size: 3rem;
+    font-size: 2.8rem;
     color: #b74b4b;
     font-weight: 800;
     cursor: pointer;
@@ -68,12 +68,12 @@ header {
 .hamburger {
     display: none;
     cursor: pointer;
-    font-size: 2.5rem;
+    font-size: 2.1rem;
     color: white;
 }
 
 nav a {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: white;
     margin-left: 4rem;
     font-weight: 500;

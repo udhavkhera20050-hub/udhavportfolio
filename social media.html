@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Media Section</title>
+  <link rel="stylesheet" href="./asset/css/social media.css">
+  <style>
+    body {
+      background-color: #000; /* optional for testing contrast */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      padding: 40px;
+    }
+
+    .vlog-card {
+      background: #000000;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: transform 0.3s;
+      max-width: 400px;
+    }
+
+    .vlog-card:hover {
+      transform: scale(1.03);
+    }
+
+    .vlog-thumb img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- First Image -->
+  <div class="vlog-card">
+    <div class="vlog-thumb">
+      <img src="./asset/images/Happy Navratri.png" alt="Happy Navratri" class="images">
+    </div>
+  </div>
+
+  <!-- Second Image -->
+  <div class="vlog-card">
+    <div class="vlog-thumb">
+      <img src="./asset/images/Video editing.png" alt="Video Editing" class="images">
+    </div>
+  </div>
+
+  <!-- Third Image -->
+  <div class="vlog-card">
+    <div class="vlog-thumb">
+      <img src="./asset/images/happy ganesh chaturthi.png" alt="happy ganesh chaturthi" class="images">
+    </div>
+  </div>
+
+</body>
+</html>

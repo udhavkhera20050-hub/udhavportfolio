@@ -4,24 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta name="description" content="Udhav Khera - Graphic Designer Portfolio">
-  <title>Udhav Khera | Portfolio</title>
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="./asset/css/style.css">
+  <title>Portfolio Website</title>
 </head>
-
 <body>
 
-  <!-- HEADER -->
+  <!-- Header -->
   <header>
     <a href="#" class="logo">Udhav Khera</a>
-
-    <div class="hamburger">
-      <i class="fas fa-bars"></i>
-    </div>
-
+    <div class="hamburger"><i class="fas fa-bars"></i></div>
     <nav>
       <a href="#" class="active">Home</a>
       <a href="#about">About</a>
@@ -30,115 +22,135 @@
     </nav>
   </header>
 
-  <main>
-
-    <!-- HOME -->
-    <section class="home">
-      <div class="home-img">
-        <div class="card">
-          <div class="glow"></div>
-        </div>
+  <!--  Home Section -->
+  <section class="home">
+    <div class="home-img">
+      <div class="card">
       </div>
-
-      <div class="home-content">
-        <h1>Hi, I'm <span>Udhav Khera</span></h1>
-
-        <h3>I'm a <span id="typing"></span></h3>
-
-        <p>
-          I design thumbnails, banners, and social media posts that help brands grow.
-        </p>
-
-        <div class="social-icons">
-          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-          <a href="#"><i class="fa-brands fa-github"></i></a>
-        </div>
-
-        <a href="./contact.html" class="glowbtn">Hire Me</a>
+    </div>
+    <div class="home-content">
+      <h1>Hi, It's <span>Udhav Khera</span></h1>
+      <h3 class="typing-text">I'm a <span id="typing"></span></h3>
+      <p>Hi, I’m Udhav Khera, a passionate Graphic Designer with 1 year of creative experience. I specialize in turning ideas into eye-catching visuals that connect, inspire, and communicate your brand story.</p>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/udhav-khera-a5574b271/"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/udhavkhera20050-hub"><i class="fa-brands fa-github"></i></a>
       </div>
-    </section>
+      <a href="#" class="btn glowbtn">Hire me</a>
+    </div>
+  </section>
 
-    <!-- ABOUT -->
-    <section id="about" class="about-section">
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <div class="container">
       <div class="about-grid">
-
+        <!-- Left: profile / image -->
         <div class="about-image">
           <div class="card">
             <div class="glow"></div>
           </div>
         </div>
 
+        <!-- Right: text -->
         <div class="about-content">
-          <h2>About Me</h2>
+          <p class="eyebrow">About Me</p>
+          <h2 class="name">Hi, I’m <strong>Udhav Khera</strong></h2>
+          <p class="lead">
+            I’m a professional <strong>Graphic Designer</strong> with 1+ year of experience, specializing in
+            <strong>YouTube thumbnails, social media posts, website banners</strong>, and <strong>Fiverr gig images</strong>.
+            I create eye-catching, high-quality visuals that help content stand out, attract clicks, and grow audiences.
+          </p>
+
           <p>
-            I am a Graphic Designer with 1+ year experience in thumbnails, banners & branding.
+            I’m easy to work with, deliver fast, and focus on designs that are both creative and effective. Whether you need a
+            thumbnail that boosts views, a banner that strengthens your brand, or a gig image that converts—my goal is simple:
+            <strong>make your content look professional and get results.</strong>
           </p>
 
           <div class="about-actions">
-            <a class="seework" href="#work">See Work</a>
-            <a class="ghost" href="./contact.html">Contact</a>
+            <a class="seework" href="#work" rel="noopener">See my work</a>
+            <a class="ghost" rel="noopener" style="color:white;">Let’s work</a>
           </div>
         </div>
-
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- WORK -->
-    <section id="work" class="work">
-      <h2>My Work</h2>
+</body>
 
-      <div class="work-grid">
+<script src="./asset/js/script.js"></script>
+</html>
 
-        <article class="work-card">
-          <div class="work-thumb">
-            <img src="./asset/images/EDUCATION.png" alt="Education" loading="lazy">
-          </div>
-          <div class="work-content">
-            <h3>Education Thumbnails</h3>
-            <a href="./Education.html" class="btn-work">View</a>
-          </div>
-        </article>
+<!-- work-section.html -->
+<section class="work" id="work" aria-labelledby="work-title">
+  <div class="work-container">
+    <h2 id="work-title">Selected Work</h2>
+    <p class="work-subtitle">
+      A showcase of projects I’ve designed and developed — blending creativity, usability, and performance.
+    </p>
 
-        <article class="work-card">
-          <div class="work-thumb">
-            <img src="./asset/images/FINANCE THUMBNAILS.png" alt="Finance" loading="lazy">
-          </div>
-          <div class="work-content">
-            <h3>Finance Thumbnails</h3>
-            <a href="./finance.html" class="btn-work">View</a>
-          </div>
-        </article>
+    <div class="work-grid">
+      <!-- Project Card 1 -->
+      <article class="work-card">
+        <div class="work-thumb">
+          <img src="./asset/images/EDUCATION.png" alt="Project One Thumbnail">
+        </div>
+        <div class="work-content">
+          <h3>Education thumbnails</h3>
+          <p>
+          </p>
+          <a href="./Education.html" class="btn-work" title="View Project">View Project →</a>
+        </div>
+      </article>
 
-        <article class="work-card">
-          <div class="work-thumb">
-            <img src="./asset/images/website.png" alt="Website" loading="lazy">
-          </div>
-          <div class="work-content">
-            <h3>Website Banner</h3>
-            <a href="./website-banner.html" class="btn-work">View</a>
-          </div>
-        </article>
+      <!-- Project Card 2 -->
+      <article class="work-card">
+        <div class="work-thumb">
+          <img src="./asset/images/FINANCE THUMBNAILS.png" alt="Project Two Thumbnail">
+        </div>
+        <div class="work-content">
+          <h3>Finance thumbnails</h3>
+          <p>
+          </p>
+          <a href="./finance.html" class="btn-work" title="View Project">View Project →</a>
+        </div>
+      </article>
 
-        <article class="work-card">
-          <div class="work-thumb">
-            <img src="./asset/images/SOCIAL MEDIA POST.png" alt="Social Media" loading="lazy">
-          </div>
-          <div class="work-content">
-            <h3>Social Media</h3>
-            <a href="./social-media.html" class="btn-work">View</a>
-          </div>
-        </article>
+      <!-- Project Card 3 -->
+      <article class="work-card">
+        <div class="work-thumb">
+          <img src="./asset/images/website.png" alt="Project Three Thumbnail">
+        </div>
+        <div class="work-content">
+          <h3>Website Banner</h3>
+          <p>
+          </p>
+          <a href="./website banner.html" class="btn-work" title="View Project">View Project →</a>
+        </div>
+      </article>
+  
+<!-- Project Card 4 -->
+  <article class="work-card">
+    <div class="work-thumb">
+      <img src="./asset/images/SOCIAL MEDIA POST.png" alt="Four Thumbnail">
+    </div>
+    <div class="work-content">
+      <h3>Social Media Post</h3>
+      <p>
+      </p>
+      <a href="./social media.html" class="btn-work" title="View Project">View Project →</a>
+    </div>
+  </article>
 
-      </div>
-    </section>
+       </div>
+  </div>
+</section>
 
-  </main>
-
-  <footer>
-    &copy; 2025 Udhav Graphics
-  </footer>
-
-  <script src="./asset/js/script.js"></script>
-
+      <!-- Footer -->
+<footer>
+  &copy; 2025 All design by Udhav Graphics
+</footer>
+    
+<script src="script.js"></script>
 </body>
 </html>

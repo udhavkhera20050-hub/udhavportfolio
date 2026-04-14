@@ -1,85 +1,61 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const hamburger = document.querySelector('.hamburger');
-    const nav = document.querySelector('nav');
 
-    hamburger.addEventListener('click', () => {
-        nav.classList.toggle('active');
+  // MENU
+  const hamburger = document.querySelector('.hamburger');
+  const nav = document.querySelector('nav');
+
+  hamburger?.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
+
+  // TYPING
+  const typing = document.getElementById('typing');
+  const words = ["Graphic Designer", "Thumbnail Designer", "UI Designer"];
+
+  let i = 0, j = 0, isDeleting = false;
+
+  function type() {
+    const word = words[i];
+
+    typing.innerHTML = word.substring(0, j);
+
+    if (!isDeleting) j++;
+    else j--;
+
+    if (j === word.length) {
+      isDeleting = true;
+      setTimeout(type, 1200);
+      return;
+    }
+
+    if (j === 0 && isDeleting) {
+      isDeleting = false;
+      i = (i + 1) % words.length;
+    }
+
+    setTimeout(type, isDeleting ? 60 : 120);
+  }
+
+  type();
+
+  // CARD GLOW FIX
+  document.querySelectorAll(".card").forEach(card => {
+    const glow = card.querySelector(".glow");
+
+    card.addEventListener("mousemove", (e) => {
+      if (!glow) return;
+
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      glow.style.background =
+        `radial-gradient(circle at ${x}px ${y}px, rgba(255,255,255,0.2), transparent 60%)`;
     });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    const typingElement = document.getElementById('typing');
-    const words = ["Graphic Designer", "Thumbnail Designer"];
-    let wordIndex = 0;
-    let letterIndex = 0;
-    let currentWord = '';
-    let currentLetters = '';
-    let isDeleting = false;
-    function type() {
-        if (isDeleting) {
-            currentLetters = currentWord.substring(0, letterIndex - 1);
-            letterIndex--;
-        } else {
-            currentLetters = currentWord.substring(0, letterIndex + 1);
-            letterIndex++;
-        }
-
-        typingElement.innerHTML = currentLetters;
-
-        let typeSpeed = 200;
-        if (isDeleting) {
-            typeSpeed /= 2;
-        }
-
-        if (!isDeleting && letterIndex === currentWord.length) {
-            typeSpeed = 2000;
-            isDeleting = true;
-        } else if (isDeleting && letterIndex === 0) {
-            isDeleting = false;
-            wordIndex++;
-            if (wordIndex === words.length) {
-                wordIndex = 0;
-            }
-            currentWord = words[wordIndex];
-            typeSpeed = 500;
-        }
-
-        setTimeout(type, typeSpeed);
-    }
-    currentWord = words[wordIndex];
-    type();
-});
-
-// Dynamic glow follows mouse
-document.querySelectorAll(".card").forEach(card => {
-  card.addEventListener("mousemove", (e) => {
-    const rect = card.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    glow.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(255,255,255,0.4), transparent 70%)`;
+    card.addEventListener("mouseleave", () => {
+      if (glow) glow.style.background = "none";
+    });
   });
+
 });
